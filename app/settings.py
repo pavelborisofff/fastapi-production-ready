@@ -3,6 +3,7 @@
 """
 
 from pathlib import Path
+from typing import Optional
 
 from dotenv import load_dotenv
 from pydantic import BaseSettings
@@ -17,7 +18,7 @@ class Settings(BaseSettings):
     """
         Settings class
     """
-    main_url: str
+    main_url: Optional[str] = None
 
 
 settings = Settings()
